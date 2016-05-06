@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.akshay.proj"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".GlobalApplication"
+        android:icon="@drawable/images"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo">
+        <activity
+            android:name=".WiFiDirectActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.akshay.proj.WiFiDirectActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FileTransferService"
+            android:enabled="true" />
+        <service
+            android:name=".WiFiClientIPTransferService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".Page2"
+            android:label="@string/title_activity_page2">
+            <intent-filter>
+                <action android:name="com.example.akshay.proj.Page2" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home"
+            android:label="@string/title_activity_home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".help"
+            android:label="@string/title_activity_help">
+            <intent-filter>
+                <action android:name="com.example.akshay.proj.help" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.akshay.proj.MainScreenActivity"
+            android:label="@string/app_name" 
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="com.example.akshay.proj.MainScreenActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.akshay.proj.ChatSearchScreenFrag"
+            android:label="@string/title_activity_chat_search_screen_frag" 
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="com.example.akshay.proj.ChatHistoryScreenFrag"
+            android:label="@string/title_activity_chat_history_screen_frag"
+            android:configChanges="orientation|screenSize" >
+        </activity>
+        <activity
+            android:name="com.example.akshay.proj.QuickPrefsActivity"
+            android:label="@string/app_name" 
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
+            
+                        <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.akshay.proj.MainScreenActivity" />
+            >
+        </activity>
+
+        <service android:name="com.example.akshay.proj.LocalService" >
+        </service>
+        <activity
+            android:name="com.example.akshay.proj.ChatActivity"
+            android:label="@string/title_activity_chat"   
+            android:configChanges="orientation|screenSize"       
+            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
+            
+                        <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.akshay.proj.MainScreenActivity" />
+        </activity>
+        <activity
+            android:name="com.example.akshay.proj.HistoryActivity"
+            android:label="@string/title_activity_history" 
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
+            
+                        <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.akshay.proj.MainScreenActivity" />
+        </activity>
+
+    </application>
+
+</manifest>
