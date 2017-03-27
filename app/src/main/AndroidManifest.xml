@@ -4,9 +4,12 @@
     android:versionCode="1"
     android:versionName="1.0">
 
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk android:minSdkVersion="15" />
+
+    <!-- Permissions -->
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -17,8 +20,9 @@
 
     <application
         android:name=".GlobalApplication"
-        android:icon="@drawable/images"
+        android:icon="@drawable/app_logo"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:theme="@android:style/Theme.Holo">
         <activity
             android:name=".WiFiDirectActivity"
@@ -51,7 +55,6 @@
             android:label="@string/title_activity_home">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -65,9 +68,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.akshay.proj.MainScreenActivity"
-            android:label="@string/app_name" 
-            android:configChanges="orientation|screenSize">
+            android:name=".MainScreenActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="com.example.akshay.proj.MainScreenActivity" />
 
@@ -75,53 +78,80 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.akshay.proj.ChatSearchScreenFrag"
-            android:label="@string/title_activity_chat_search_screen_frag" 
-            android:configChanges="orientation|screenSize">
-        </activity>
-        <activity
-            android:name="com.example.akshay.proj.ChatHistoryScreenFrag"
-            android:label="@string/title_activity_chat_history_screen_frag"
-            android:configChanges="orientation|screenSize" >
-        </activity>
-        <activity
-            android:name="com.example.akshay.proj.QuickPrefsActivity"
-            android:label="@string/app_name" 
+            android:name=".ChatSearchScreenFrag"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
-            
-                        <!-- Parent activity meta-data to support API level 7+ -->
+            android:label="@string/title_activity_chat_search_screen_frag"></activity>
+        <activity
+            android:name=".ChatHistoryScreenFrag"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_chat_history_screen_frag"></activity>
+        <activity
+            android:name=".QuickPrefsActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name"
+            android:parentActivityName=".MainScreenActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.akshay.proj.MainScreenActivity" />
             >
         </activity>
 
-        <service android:name="com.example.akshay.proj.LocalService" >
-        </service>
+        <service android:name=".LocalService"></service>
+
         <activity
-            android:name="com.example.akshay.proj.ChatActivity"
-            android:label="@string/title_activity_chat"   
-            android:configChanges="orientation|screenSize"       
-            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
-            
-                        <!-- Parent activity meta-data to support API level 7+ -->
+            android:name=".ChatActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_chat"
+            android:parentActivityName=".MainScreenActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.akshay.proj.MainScreenActivity" />
         </activity>
         <activity
-            android:name="com.example.akshay.proj.HistoryActivity"
-            android:label="@string/title_activity_history" 
+            android:name=".HistoryActivity"
             android:configChanges="orientation|screenSize"
-            android:parentActivityName="com.example.akshay.proj.MainScreenActivity" >
-            
-                        <!-- Parent activity meta-data to support API level 7+ -->
+            android:label="@string/title_activity_history"
+            android:parentActivityName=".MainScreenActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.akshay.proj.MainScreenActivity" />
         </activity>
 
+        <!-- for wifi -->
+        <activity
+            android:name=".wifi.PlayScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.Songs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.PlaySolo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.PlayScreenSolo"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.PlayScreenHost"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.PlayScreenClient"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.Receiver"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wifi.Home_Screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Home_Logo"
+            android:screenOrientation="portrait" />
+        <activity android:name=".wifi.Join"></activity>
     </application>
 
 </manifest>

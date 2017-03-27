@@ -19,32 +19,39 @@
         android:textColor="@android:color/white"
         android:textOff="OFF"
         android:textOn="ON"
-        android:layout_alignLeft="@+id/b1"
-        android:layout_alignStart="@+id/b1"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/share"
-        android:id="@+id/b1"
-        android:layout_above="@+id/b2"
-        android:layout_alignLeft="@+id/b2"
-        android:layout_alignRight="@+id/b2"
-        android:textColor="@android:color/black"
-        android:background="@drawable/bg2" />
 
     <Button
+        android:id="@+id/b3"
+        style="@style/FancyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Play"
+        android:layout_below="@id/wifi_switch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="109dp" />
+
+    <Button
+        android:id="@+id/b2"
+        style="@style/FancyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/chat"
-        android:id="@+id/b2"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@android:color/black"
-        android:background="@drawable/bg2" />
+        android:layout_marginTop="37dp"
+        android:layout_below="@id/b3"
+        android:layout_centerHorizontal="true" />
 
+    <Button
+        android:id="@+id/b1"
+        style="@style/FancyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Share"
+        android:layout_marginTop="36dp"
+        android:layout_below="@id/b2"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

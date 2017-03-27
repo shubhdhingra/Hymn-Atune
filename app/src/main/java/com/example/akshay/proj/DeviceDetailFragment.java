@@ -181,7 +181,7 @@ public class DeviceDetailFragment extends Fragment implements ConnectionInfoList
 		mContentView.findViewById(R.id.btn_ppt).setBackgroundResource(R.drawable.ppt_pic);
 		mContentView.findViewById(R.id.btn_ppt).getLayoutParams().width= 80;
 		mContentView.findViewById(R.id.btn_ppt).getLayoutParams().height= 80;
-		mContentView.findViewById(R.id.btn_apk).setBackgroundResource(R.drawable.apk_pic);
+		mContentView.findViewById(R.id.btn_apk).setBackgroundResource(R.drawable.app_logo);
 		mContentView.findViewById(R.id.btn_apk).getLayoutParams().width= 80;
 		mContentView.findViewById(R.id.btn_apk).getLayoutParams().height= 80;
 

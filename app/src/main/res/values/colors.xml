@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	 <color name="LightOrange">#F2B74A</color>
+ <color name="LightOrange">#F2B74A</color>
  <color name="White">#FFFFFF</color>
  <color name="Ivory">#FFFFF0</color>
  <color name="LightYellow">#FFFFE0</color>
@@ -101,11 +101,9 @@
  <color name="Aquamarine">#7FFFD4</color>
  <color name="Chartreuse">#7FFF00</color>
  <color name="LawnGreen">#7CFC00</color>
- <color name="Aqua ">#00FFFF</color>
  <color name="LightSlateGray">#778899</color>
  <color name="SlateGray">#708090</color>
  <color name="OliveDrab">#6B8E23</color>
- <color name="BlueViolet ">#8A2BE2</color>
  <color name="DimGray">#696969</color>
  <color name="MediumAquamarine">#66CDAA</color>
  <color name="CornflowerBlue">#6495ED</color>
@@ -138,7 +136,6 @@
  <color name="DarkGreen">#006400</color>
  <color name="Blue">#0000FF</color>
  <color name="MediumBlue">#0000CD</color>
- <color name="Crimson ">#DC143C</color>
  <color name="Navy">#000080</color>
  <color name="Black">#000000</color>
  
@@ -165,4 +162,43 @@
 
     <color name="status_bar_color">#FF000000</color>
     <color name="layout_border_color">#FF111111</color>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <color name="colorPrimary">#3F51B5</color>
+ <color name="colorPrimaryDark">#303F9F</color>
+ <color name="colorAccent">#FF4081</color>
+ <color name="red">#FF0000</color>
+ <color name="black">#000000</color>
+ <color name="blue">#162ac1</color>
+ <color name="yellow">#FFFF00</color>
+ <color name="white">#FFFFFF</color>
+ <color name="green">#008000</color>
+ <color name="orange">#FF4500</color>
+ <color name="light_blue">#f4ffff</color>
+ <color name="fade_blue">#0066CC</color>
+ <color name="dark_faded_blue">#004080</color>
+ <color name="mediumvioletred">#C71585</color>
+ <color name="colorPrimary1">#546b76</color>
+ <color name="colorPrimaryDark1">#3e5560</color>
+ <color name="colorAccent1">#FF4081</color>
+ <color name="red1">#fc1606</color>
+ <color name="point_color">#0174DF</color>
+ <color name="point_halo_color">#88252525</color>
+ <color name="text_color">#FF0000</color>
+ <color name="wheel_active_color">#00BFFF</color>
+ <color name="wheel_unactive_color">#9c9b9b</color>
+
 </resources>

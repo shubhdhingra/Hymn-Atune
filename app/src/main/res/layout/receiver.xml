@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="@color/black"
+    tools:context=".wifi.Receiver">
+
+    <TextView
+        android:text="RECIEVER"
+        android:textStyle="bold"
+        android:id="@+id/head"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="40sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/head"
+        />
+
+    <Space
+        android:id="@+id/space3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/textView"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="WAITING..."
+        android:layout_below="@+id/space2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="87dp" />
+
+    <!--EditText
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/space3" /-->
+
+
+</RelativeLayout>

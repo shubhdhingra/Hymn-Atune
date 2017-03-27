@@ -12,11 +12,16 @@ import android.widget.Switch;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
-public class Page2 extends Activity {    Button b1,b2,b3;
+import com.example.akshay.proj.wifi.Home_Screen;
+
+public class Page2 extends Activity {
+    Button b1,b2,b3;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page2);
+
+        Toast.makeText(getApplicationContext(),"TURN ON WIFI FOR Share/Chat",Toast.LENGTH_LONG).show();
 
         Switch toggle = (Switch) findViewById(R.id.wifi_switch);
         WifiManager wifiManager1 = (WifiManager) this.getSystemService(Context.WIFI_SERVICE);
@@ -51,6 +56,7 @@ public class Page2 extends Activity {    Button b1,b2,b3;
     {
         b1=(Button)findViewById(R.id.b1);
         b2=(Button)findViewById(R.id.b2);
+        b3=(Button)findViewById(R.id.b3);
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,5 +77,13 @@ public class Page2 extends Activity {    Button b1,b2,b3;
             }
         });
 
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i1=new Intent(Page2.this,Home_Screen.class);
+                startActivity(i1);
+            }
+        });
     }
 }
